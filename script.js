@@ -71,3 +71,7 @@ buttonArticle2.onclick = ()=>{
         chart.style.color= "rgb(2 11 56)"
     }
 }
+
+
+
+

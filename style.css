@@ -172,16 +172,19 @@ nav{
     opacity: 1;
     transform: translateY(40px);
 }
+.whoUs-mob{
+    display: none;
+}
 
 
 /*   container5  */
 
 .container5{
-    padding: 100px 100px;
+    padding: 100px 40px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat( 3 , 1fr);
-    gap: 100px;
+    gap: 40px;
     overflow: none;
 }
  .card-item{
@@ -291,6 +294,15 @@ justify-content: space-around !important;
     font-size: 3rem;
     padding: 2rem;
     color: #3F51B5;
+}
+
+
+/* map */
+.container-map{
+    text-align: center;
+}
+.container-map h1{
+    padding: 50px;
 }
 
 /* footer */
@@ -403,6 +415,9 @@ footer .details-footer a{
     .container7 .steps{
         grid-template-columns: 1fr;
     }
+
+
+
     /* footer */
     footer{
         grid-template-columns: 1fr;
