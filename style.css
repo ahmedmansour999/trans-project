@@ -9,6 +9,13 @@ body{
     margin: 0;
     font-family: 'El Messiri', sans-serif;
 }
+a{
+    text-decoration: none;
+}
+
+.whatsapp{
+    
+}
 
 /* nav bar */
 .carousel-item p{
@@ -23,7 +30,7 @@ body{
 }
 @keyframes moving-1 {
     0% {
-        transform: translate(-10%, -50%);
+        transform: translate(-50%, -212%);
     }
     50%{
         transform: translate(-50%, -50%);
@@ -125,6 +132,7 @@ nav{
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    animation: opacity 4s ;
 }
 .container3 .item p {
     margin-left:.4em ;
@@ -186,6 +194,8 @@ nav{
     grid-template-columns: repeat( 3 , 1fr);
     gap: 40px;
     overflow: none;
+    transition: all 2s ease ;
+    animation: motionY 2s;
 }
  .card-item{
     text-align: center;
@@ -248,6 +258,8 @@ nav{
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
     border: none;
+    transition: all 2s ease ;
+    animation: motionX 2s;
 }
 .container6 .element{
     display: flex;
@@ -284,6 +296,7 @@ nav{
 .steps .card-item{
 height: 345px;
 justify-content: space-around !important;
+animation: scale 3s ;
 }
 .steps .card-item p{
     background-color: #16163f;
@@ -432,4 +445,41 @@ footer .details-footer a{
 .show-content {
     opacity: 1;
     transform: translateY(40px);
+}
+
+
+@keyframes opacity {
+    0%   {opacity : 0;}
+    50% {opacity: .5;}
+    100% {opacity: 1;}
+}
+
+@keyframes motionY {
+    0%{
+        transform: translatey(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translatey(0%);
+        opacity: 1;
+    }
+}
+@keyframes motionX {
+    0%{
+        transform: translatex(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translatex(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+    0%{
+        scale: .1;
+    }
+    100%{
+        scale: 1;
+    }
 }
