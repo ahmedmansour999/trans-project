@@ -13,7 +13,32 @@ a{
     text-decoration: none;
 }
 
-.whatsapp{
+.whatsapp-container{
+    position: fixed;
+    bottom: 20px; /* Adjust this value as needed to control the vertical placement */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.whatsapp-container .phone{
+    background-color: #020b38;
+    padding: 10px;
+    font-size: 2rem;
+    margin: 0 10px;
+    border-radius: 12px;
+    z-index: 99;
+}
+.whatsapp-container .whatsapp{
+    background-color: #08d808;
+    padding: 10px;
+    font-size: 2rem;
+    margin: 0 10px;
+    border-radius: 12px;
+    z-index: 99;
+}
+.whatsapp i{
+    color: white;
     
 }
 
@@ -359,6 +384,16 @@ footer .details-footer a{
         background: beige;
         border: none;
         border-radius: 14px;
+    }
+
+    .whatsapp-container{
+        text-align: center;
+    }
+    .phone{
+        width: 50%;
+    }
+    .whatsapp{
+        width: 50%;
     }
 
     /* container 3 */
