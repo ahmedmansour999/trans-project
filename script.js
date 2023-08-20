@@ -3,7 +3,7 @@ function isElementInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
         rect.top >= -10 &&
-        rect.left >= -10&&
+        rect.left >= -10 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
@@ -12,7 +12,7 @@ function isElementInViewport(element) {
 // Apply the transition effect when the element is in the viewport
 function handleScroll() {
     const container4 = document.getElementById('container4');
-    const container5 = document.getElementById('container5');
+
 
     if (isElementInViewport(container4)) {
         container4.classList.add('show-content');
