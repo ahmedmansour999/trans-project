@@ -389,11 +389,15 @@ footer .details-footer a{
     .whatsapp-container{
         text-align: center;
     }
-    .phone{
+    .whatsapp-container .phone{
         width: 50%;
+        margin: 0;
+        border-radius: 0;
     }
-    .whatsapp{
+    .whatsapp-container .whatsapp{
         width: 50%;
+        margin: 0;
+        border-radius: 0;
     }
 
     /* container 3 */
