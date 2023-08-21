@@ -621,5 +621,8 @@ footer .details-footer a{
         text-align: center;
         flex-direction: column;
     }
+    .whous-cover h1{
+        font-size: 3rem;
+    }
 }
 
