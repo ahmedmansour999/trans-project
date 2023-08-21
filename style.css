@@ -199,8 +199,14 @@ nav{
     transition: opacity 1s ease , transform 1s ease;
 }
 .whoUs{
-    display: flex;
-    align-items: center;
+display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.whoUs button a{
+    color: white;
+    
 }
 .whoUs span{
     font-size: 3rem;
@@ -372,6 +378,7 @@ footer .information .info-item{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    animation: motionX 3s ;
 }
 
 footer .information .info-item i {
@@ -485,7 +492,9 @@ footer .details-footer a{
     .container7 .steps{
         grid-template-columns: 1fr;
     }
-
+    .container7 h1{
+        text-align: center;
+    }
 
 
     /* footer */
@@ -563,6 +572,7 @@ footer .details-footer a{
     transform: translate(-50%, -50%);
     color: white;
     font-size: 4rem;
+    animation: moving-1 4s ;
 }
 
 /* service */
@@ -573,12 +583,14 @@ footer .details-footer a{
     justify-content: center;
     flex-direction: column;
 }
+
 .service .service-items{
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 50px 0;
     font-size: 2rem;   
     gap: 25px;
+    animation: opacity 3s , motionX 3s;
 
 }
 .service .service-items .service-item i{
