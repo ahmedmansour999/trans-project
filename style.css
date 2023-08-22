@@ -25,6 +25,14 @@ a{
 .container-top p {
     margin-top: 13px;
 }
+@media (max-width :768px ) {
+    .container-top{
+        flex-direction: column;
+    }
+    .container-top p {
+        margin-top: 0;
+    }
+  }
 
 .whatsapp-container{
     position: fixed;
