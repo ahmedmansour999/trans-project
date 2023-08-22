@@ -152,6 +152,10 @@ nav{
 /* sidebar */
 .sideBar-container{
     width: 100%;
+    height: 80vh;
+}
+.carousel-item img{
+    position: center center;
 }
 .carousel-item img , .carousel , .carousel-inner {
     width: 100% ; 
@@ -389,6 +393,29 @@ animation: scale 3s ;
     color: #3F51B5;
 }
 
+/* media */
+.media{
+    padding: 100px;
+}
+
+.media-img{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+}
+.media .media-item{
+    margin: 15px;
+    box-shadow: 1px 1px 5px 0px #020b38 ;
+    overflow: hidden;
+}
+.media-img img{
+    width: 100%;
+    height: 100%;
+    transition: all 4s ease;
+}
+
+.media .media-item:hover img{
+    scale: 1.5;
+}
 
 /* map */
 .container-map{
@@ -414,6 +441,7 @@ footer .information .info-item{
     flex-direction: row-reverse;
     justify-content: space-between;
     animation: motionX 3s ;
+    justify-content: flex-start;
 }
 
 footer .information .info-item i {
@@ -658,6 +686,7 @@ footer .details-footer a{
     justify-content: space-evenly;
     padding: 100px;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 
