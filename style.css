@@ -247,6 +247,12 @@ display: flex;
     height: 100%; /* The video takes up the entire height of the container */
     object-fit: cover; /* Maintain aspect ratio and cover the container */
   }
+
+  @media (max-width :768px ) {
+    .video-container{
+        height: 45vh;
+    }
+  }
   
 
   
