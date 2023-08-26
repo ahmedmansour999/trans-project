@@ -75,3 +75,26 @@ buttonArticle2.onclick = ()=>{
 
 
 
+// email send
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('emailForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      let email = document.getElementById('email').value;
+      let name = document.getElementById('name').value;
+      let message = document.getElementById('message').value;
+      
+      Email.send({
+        Host: "smtp.email.com",
+        Username: "ahmedmanour990@gmail.com",
+        Password: "TSS C E K T KY O EI O XWC",
+        To: 'moslselforsan@gmail.com',
+        From: email,
+        Subject: name,
+        Body: message,
+      }).then(function (message) {
+        alert(message);
+      });
+    });
+  });
