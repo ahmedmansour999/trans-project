@@ -140,17 +140,15 @@
               </div>
         </div>
 
-<!-- comment  -->
+<!-- comment -->
 <div class="form">
   <h1>تواصل معنا </h1>
-  <input type="text" id="name" class="name " required placeholder="الاسم">
+  <input type="text" id="name" class="name" required placeholder="الاسم">
   <input type="text" id="email" class="email" required placeholder="البريد الالكتروني">
-  <div class="message">
-    <input type="text" id="message1" class="message1" required placeholder="المنطقه">
-    <input type="number" id="message2" class="message2" required placeholder="عدد الغرف">
-  </div>
+  <input type="text" id="location" class="location" required placeholder="المنطقة">
+  <input type="number" id="numRooms" class="numRooms" required placeholder="عدد الغرف">
   <textarea id="message" placeholder="تعليقك"></textarea>
-  <button type="button" class="btn btn-primary"  id="emailSend">ارسال</button>
+  <button type="button" class="btn btn-primary" id="emailSend">ارسال</button>
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -159,11 +157,13 @@
       // Get input values
       let email = document.getElementById('email').value;
       let name = document.getElementById('name').value;
+      let location = document.getElementById('location').value; // Get location value
+      let numRooms = document.getElementById('numRooms').value; // Get number of rooms value
       let message_content = document.getElementById('message').value;
       
       // Ensure fields are not empty
-      if (!email || !name || !message_content) {
-        alert('قم بملئ الخانات المطلوبه');
+      if (!email || !name || !location || !numRooms || !message_content) {
+        alert('قم بملئ الخانات المطلوبة');
         return;
       }
       
@@ -172,15 +172,23 @@
         Host: "smtp.elasticemail.com",
         Username: "moslselforsan@gmail.com",
         Password: "CB15DE6C9A0AA1E54FDED857C2983C1F75A3",
-        To: 'moslselforsan@gmail.com',  
+        To: 'moslselforsan@gmail.com',
         From: 'moslselforsan@gmail.com',
         Subject: `Message from ${name}`,
-        Body: message_content,
+        Body: `
+          البريد الالكتروني : ${email}
+          <br>
+          المنطقة: ${location}
+          <br>
+          عدد الغرف: ${numRooms}
+          <br>
+          تعليق: ${message_content}
+        `, // Include location and numRooms in the email body
       }).then(function (message) {
-        alert('تم الارسال بالنجاح ');
+        alert('تم الارسال بنجاح');
       }).catch(function (error) {
-        console.error('Email sending error:', error);
-        alert('An error occurred while sending the email.');
+        console.error('خطأ في إرسال البريد الإلكتروني:', error);
+        alert('حدث خطأ أثناء إرسال البريد الإلكتروني.');
       });
     });
   });
